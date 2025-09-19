@@ -1,5 +1,6 @@
 /* RESET */
-    @import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 * {
   margin: 0;
   padding: 0;
@@ -54,7 +55,8 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-  color: #e10600; /* rouge F1 */
+  color: #e10600;
+  /* rouge F1 */
 }
 
 #darkModeToggle {
@@ -79,7 +81,8 @@ nav .nav-links a:hover {
 
 .video-bg {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -91,8 +94,11 @@ nav .nav-links a:hover {
 .hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -246,12 +252,86 @@ h3 {
 }
 
 #video-background {
-      position: fixed;
-      right: 0; 
-      bottom: 0;
-      min-width: 100%; 
-      min-height: 100%;
-      width: auto; 
-      height: auto;
-      z-index: -100;
-    }
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+/* 📱 Responsive pour téléphones */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+
+  /* HERO */
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 50px 5%;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  /* CARDS */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* TEAMS GRID */
+  .teams {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .team h3 {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.9rem;
+    padding: 20px 10px;
+  }
+
+  /* HEADER */
+  header {
+    height: 60vh;
+    /* moins haut sur téléphone */
+    background-position: center;
+    background-size: cover;
+  }
+}

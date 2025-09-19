@@ -10,11 +10,12 @@
 
 <body>
   <!-- HEADER -->
-  <header>
+  <header id="intro">
     <nav>
       <a href="https://momort02.github.io/F1-site/">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" alt="F1 Logo" class="logo" h>
       </a>
+    
       <ul class="nav-links">
         <li><a href="#intro">Accueil</a></li>
         <li><a href="#cars">Voitures</a></li>
@@ -297,6 +298,15 @@
   </footer>
 
   <script src="scripts/script.js"></script>
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
 </body>
 
 </html>
